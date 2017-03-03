@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="pref_key_notifications"
+        android:title="@string/pref_notification_header">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pref_key_all_notifications"
+            android:title="@string/pref_all_notifications" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="pref_key_all_notifications"
+            android:key="pref_key_status_update_notifications"
+            android:title="@string/pref_status_update_notifications" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:dependency="pref_key_all_notifications"
+            android:key="pref_key_new_article_notifications"
+            android:title="@string/pref_new_article_notifications" />
+    </PreferenceCategory>
+</PreferenceScreen>
